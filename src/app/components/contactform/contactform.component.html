@@ -1,0 +1,91 @@
+<div class="desktop">
+    <div class="card column">
+        <div>
+            <h2>CONTACT <span style="color: #111;">US</span></h2>
+        </div>
+        <form [formGroup]="messageForm" (submit)="sendMessage()">
+            <div class="column input-group">
+                <label [class.error-label]="_fullName?.invalid && (_fullName?.touched || _fullName?.dirty)">Full
+                    Name</label>
+                <input type="text" formControlName="fullName"
+                    [class.input-error]="_fullName?.invalid && (_fullName?.touched || _fullName?.dirty)">
+                <label class="error-label" *ngIf="_fullName?.invalid && (_fullName?.touched || _fullName?.dirty)">Full
+                    Name
+                    is requred</label>
+            </div>
+            <div class="column input-group">
+                <label>Company Name</label>
+                <input type="text" formControlName="companyName">
+            </div>
+            <div class="column input-group">
+                <label
+                    [class.error-label]="_phoneNumber?.invalid && (_phoneNumber?.touched || _phoneNumber?.dirty)">Phone
+                    Number</label>
+                <input type="tel" formControlName="phoneNumber"
+                    [class.input-error]="_phoneNumber?.invalid && (_phoneNumber?.touched || _phoneNumber?.dirty)">
+                <label class="error-label"
+                    *ngIf="_phoneNumber?.invalid && (_phoneNumber?.touched || _phoneNumber?.dirty)">Phone Number is
+                    invalid</label>
+            </div>
+            <div class="column input-group">
+                <label [class.error-label]="_email?.invalid && (_email?.touched || _email?.dirty)">E-mail</label>
+                <input type="email" formControlName="email"
+                    [class.input-error]="_email?.invalid && (_email?.touched || _email?.dirty)">
+                <label class="error-label" *ngIf="_email?.invalid && (_email?.touched || _email?.dirty)">Email is
+                    invalid</label>
+            </div>
+            <div class="column input-group">
+                <label for="">Write Us Messages</label>
+                <input type="text" formControlName="message">
+            </div>
+            <button>Send Message</button>
+        </form>
+    </div>
+</div>
+
+<div class="mobile">
+    <div class="card column">
+        <div>
+            <h2>CONTACT <span style="color: #111;">US</span></h2>
+        </div>
+        <form [formGroup]="messageForm" (submit)="sendMessage()">
+            <div class="column input-group">
+                <label [class.error-label]="_fullName?.invalid && (_fullName?.touched || _fullName?.dirty)">Full
+                    Name</label>
+                <input type="text" formControlName="fullName"
+                    [class.input-error]="_fullName?.invalid && (_fullName?.touched || _fullName?.dirty)">
+                <label class="error-label" *ngIf="_fullName?.invalid && (_fullName?.touched || _fullName?.dirty)">Full
+                    Name
+                    is requred</label>
+            </div>
+            <div class="column input-group">
+                <label>Company Name</label>
+                <input type="text" formControlName="companyName">
+            </div>
+            <div class="column input-group">
+                <label
+                    [class.error-label]="_phoneNumber?.invalid && (_phoneNumber?.touched || _phoneNumber?.dirty)">Phone
+                    Number</label>
+                <input type="tel" formControlName="phoneNumber"
+                    [class.input-error]="_phoneNumber?.invalid && (_phoneNumber?.touched || _phoneNumber?.dirty)">
+                <label class="error-label"
+                    *ngIf="_phoneNumber?.invalid && (_phoneNumber?.touched || _phoneNumber?.dirty)">Phone Number is
+                    invalid</label>
+            </div>
+            <div class="column input-group">
+                <label [class.error-label]="_email?.invalid && (_email?.touched || _email?.dirty)">E-mail</label>
+                <input type="email" formControlName="email"
+                    [class.input-error]="_email?.invalid && (_email?.touched || _email?.dirty)">
+                <label class="error-label" *ngIf="_email?.invalid && (_email?.touched || _email?.dirty)">Email is
+                    invalid</label>
+            </div>
+            <div class="column input-group">
+                <label for="">Write Us Messages</label>
+                <input type="text" formControlName="message">
+            </div>
+            <div class="b-container">
+                <button>Send Message</button>
+            </div>
+        </form>
+    </div>
+</div>

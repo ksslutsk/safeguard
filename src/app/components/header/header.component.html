@@ -1,0 +1,87 @@
+<div class="desktop">
+    <div class="component">
+        <header class="row space-between">
+            <span class="row logo">
+                <img src="../../../assets/images/logo.svg" alt="logo">
+                <img src="../../../assets/images/safeguard.svg" alt="name">
+                <img src="../../../assets/images/r.svg" alt="logo">
+            </span>
+            <ul class="row">
+                <li [class.active]="activePage=='home'" (click)="changePage('home')"><a href="#">Home</a></li>
+                <li [class.active]="activePage=='about'" (click)="changePage('about')"><a href="#">About Us</a></li>
+                <li [class.active]="activePage=='wwd'" (click)="changePage('wwd')"><a href="#">What We Do</a></li>
+                <li [class.active]="activePage=='contact'" (click)="changePage('contact')"><a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="row">
+            <div class="column">
+                <h1>never caught <br>off-guard again</h1>
+                <div class="column card">
+                    <p>We are specialist in protecting your assets and reputation to make sure you operate risk-free and
+                        focus
+                        on your core business.</p>
+                    <div class="learn-more">
+                        <a>Learn More</a>
+                    </div>
+                    <div class="column scroll">
+                        <label>scroll</label>
+                        <img #arrow src="../../../assets/images/Arrow 1.svg" alt="arrow">
+                    </div>
+                </div>
+            </div>
+            <div class="helmet">
+                <img src="../../../assets/images/helmet.png" alt="helmet">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mobile">
+    <div class="component column">
+        <header class="row space-between">
+            <span class="row logo">
+                <img src="../../../assets/images/logo.svg" alt="logo" class="logo-img">
+                <img src="../../../assets/images/safeguard.svg" alt="name" class="logo-text">
+                <img src="../../../assets/images/r.svg" alt="logo" class="logo-r">
+            </span>
+            <span>
+                <img src="../../../assets/images/mobilemenuopen.svg" class="menu-button" (click)="openMobileMenu()" [style.display]="this.mobileMenuActive? 'none': 'block'">
+                <img src="../../../assets/images/mobilemenuclose.svg" class="menu-button" (click)="closeMobileMenu()" [style.display]="this.mobileMenuActive? 'block': 'none'">
+            </span>
+        </header>
+
+
+        <div class="navigation-menu column" [style.right]="this.mobileMenuActive? '0': '-100%'">
+            <ul class="column">
+                <li [class.active]="activePage=='home'" (click)="changePage('home')"><a href="#">Home</a></li>
+                <li [class.active]="activePage=='about'" (click)="changePage('about')"><a href="#">About Us</a></li>
+                <li [class.active]="activePage=='wwd'" (click)="changePage('wwd')"><a href="#">What We Do</a></li>
+                <li [class.active]="activePage=='contact'" (click)="changePage('contact')"><a href="#">Contact Us</a></li>
+                <li></li>
+            </ul>
+            <label>Services</label>
+            <ul class="column">
+                <li><a href="#">Training and<br>Implementation</a></li>
+                <li><a href="#">Cyber Consultants</a></li>
+                <li><a href="#">Consultancy and <br>brand protection</a></li>
+                <li><a href="#">Software</a></li>
+            </ul>
+        </div>
+
+        <div class="column content">
+            <h1>never caught <br>off-guard again</h1>
+            <p>We are specialist in protecting your assets and reputation to make sure you operate risk-free and
+                focus
+                on your core business.</p>
+            <div class="learn-more">
+                <a>Learn More</a>
+            </div>
+            <div class="helmet">
+                <img src="../../../assets/images/helmet.png" alt="helmet">
+            </div>
+        </div>
+    </div>
+</div>
